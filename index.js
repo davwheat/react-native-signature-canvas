@@ -23,7 +23,7 @@ const SignatureView = forwardRef(({
   onClear = () => { },
   onBegin = () => { },
   onEnd = () => { },
-  descriptionText = "Sign above",
+  descriptionText = "Please sign above",
   clearText = "Clear",
   confirmText = "Confirm",
   customHtml = null,
@@ -37,6 +37,7 @@ const SignatureView = forwardRef(({
   dotSize = 0,
   minWidth = 0.5,
   androidHardwareAccelerationDisabled = false,
+  buttonColor = '',
 }, ref) => {
   const [loading, setLoading] = useState(true);
   const webViewRef = useRef();
@@ -51,6 +52,7 @@ const SignatureView = forwardRef(({
     injectedJavaScript = injectedJavaScript.replace(/<%backgroundColor%>/g, backgroundColor);
     injectedJavaScript = injectedJavaScript.replace(/<%dotSize%>/g, dotSize);
     injectedJavaScript = injectedJavaScript.replace(/<%minWidth%>/g, minWidth);
+    injectedJavaScript = injectedJavaScript.replace(/<%buttonColor%>/g, buttonColor);
     
     let html = htmlContentValue(injectedJavaScript);
     html = html.replace(/<%style%>/g, webStyle);
