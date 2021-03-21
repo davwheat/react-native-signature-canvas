@@ -19,8 +19,8 @@ const content = (script) =>
 
     body,
     html {
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100vh;
       margin: 0;
       overflow: hidden;
       user-select: none;
@@ -48,8 +48,8 @@ const content = (script) =>
     }
 
     .rotated-false {
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100vh;
       display: flex;
       flex: 1;
     }
