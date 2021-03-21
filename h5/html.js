@@ -24,6 +24,7 @@ const content = (script) =>
       margin: 0;
       overflow: hidden;
       user-select: none;
+      background: #000;
     }
 
     * {
